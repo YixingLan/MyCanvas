@@ -1,0 +1,69 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas</title>
+	<style type="text/css">
+		canvas{
+			width: 800px;
+			height: 800px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		window.onload = function displayCanvas(){
+			var canvas = document.getElementById("can");
+			// context是封装了很多绘图功能的对象
+			var context = canvas.getContext('2d'); //canvas目前只支持2d
+			 // canvas元素绘制图像的时候有两种方法，分别是
+	        // context.fill()//填充
+	        // context.stroke()//绘制边框
+	        context.fillStyle = "rgba(200,200,200,1)";
+	        context.fillRect(0,0,100,100);
+	    	context.strokeStyle = "blue";
+	    	context.lineWidth = 5;
+			
+			context.strokeRect(0,120,100,100);
+
+		}
+	</script>
+</head>
+<body>
+	<canvas id="can">ffg</canvas>
+	canvas是html5新出的标签，有自己的属性，方法和事件 -->
+	
+<!-- </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>HTML5之Canvas画正方形</title>
+<script type="text/javascript">
+    function drawFour(id)
+	{
+		//获取canvas元素
+		var canvas = document.getElementById("canvas");
+		if(canvas == null)
+		   return false;
+		//获取上下文
+		var context = canvas.getContext('2d');
+		//设定填充图形的样式
+		context.fillStyle = "#EEEEFF";
+		//绘制图形
+		context.fillRect(0,0,800,800);
+		context.fillStyle = "yellow";
+		//设定图形边框的样式
+		context.strokeStyle = "blue";
+		//指定线宽
+		context.lineWidth = 150;
+		context.fillRect(50,50,500,500);
+		context.strokeRect(50,50,500,500);	
+	}
+</script>
+</head>
+<body onLoad="drawFour('canvas')">
+   <canvas id="canvas" width="1200" height="560"></canvas>
+</body>
+</html>
